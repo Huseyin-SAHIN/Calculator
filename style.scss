@@ -8,7 +8,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 1rem;
+    min-height: 90vh;
 
     .card {
         border: 1px solid #ccc;
@@ -27,8 +28,8 @@ body {
                 border: 0;
                 border-radius: 5px;
                 text-align: end;
-                color: #333;
                 letter-spacing: 1px;
+                color: #333;
             }
         }
         .card-body {
@@ -43,14 +44,25 @@ body {
                 border: 0;
                 border-radius: 5px;
                 cursor: pointer;
+                color: #333;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+            
+                &:active{
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+                }
             }
 
+            .add{
+                grid-area: 3/4/5/4;
+            }
+            
+
             .zero {
-                grid-area: 5/1/5/3;
+                grid-area: 6/1/6/3;
             }
 
             .result {
-                grid-area: 4/4/6/4;
+                grid-area: 5/4/7/4;
             }
         }
     }

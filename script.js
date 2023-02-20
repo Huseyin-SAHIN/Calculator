@@ -3,6 +3,14 @@ const buttons = document.querySelectorAll(".button");
 const reset = document.querySelector(".reset");
 const result = document.querySelector(".result");
 const deleteLast = document.querySelector(".deleteLast");
+let ans = document.querySelector(".ans");
+
+// Ans Butonu
+ans.addEventListener("click", () => {
+    screen.value = screen.value + ans
+})
+ans = 0;
+
 
 // Buton işlemleri
 for (const button of buttons) {
@@ -27,7 +35,8 @@ deleteLast.addEventListener("click", () => {
 result.addEventListener("click", () => {
     try {
         screen.value = eval(screen.value);
-        if(eval(screen.value) == undefined){
+        ans = screen.value
+        if (eval(screen.value) == undefined) {
             screen.value = ""
         }
     } catch (error) {
@@ -36,3 +45,4 @@ result.addEventListener("click", () => {
         setInterval(() => { screen.placeholder = "|" }, 2000)
     }
 })
+
